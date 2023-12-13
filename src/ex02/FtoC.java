@@ -17,7 +17,7 @@ public class FtoC {
         System.out.println("1. 화씨->섭씨");
         System.out.println("2. 섭씨->화씨");
         System.out.println("=========================");
-
+        System.out.println();
         System.out.println("번호를 선택하시오: ");
         a = sc.nextInt();
 
@@ -30,8 +30,8 @@ public class FtoC {
 
         //(0°F − 32) × 5/9 = -17.78°C 화씨 -> 섭씨
         //(0°C × 9/5) + 32 = 32°F 섭씨 -> 화씨
-        cTemp = (d - 32) * 5 / 9;
-        fTemp = (d * 9 / 5) + 32;
+        cTemp = (d - 32) * 5.0 / 9.0;
+        fTemp = (d * 9.0 / 5.0) + 32;
 
         System.out.println((x == 1)? "섭씨온도는 " + cTemp : "화씨온도는 " + fTemp);
     }
