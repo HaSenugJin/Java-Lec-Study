@@ -1,4 +1,4 @@
-package ex02;
+package ex02.MiniProject;
 
 import java.util.Scanner;
 
