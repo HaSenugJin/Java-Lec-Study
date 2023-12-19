@@ -19,7 +19,8 @@ public class ScopeEx01 {
         System.out.println("1");
         m1();
         System.out.println("2");
-        ScopeEx01 s = new ScopeEx01();
-        System.out.println(s.n1);
+        ScopeEx01 sc = new ScopeEx01();
+        System.out.println(sc.n1);
+        sc.m2();
     }
 }
