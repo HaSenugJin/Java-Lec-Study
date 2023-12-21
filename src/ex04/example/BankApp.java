@@ -16,10 +16,16 @@ public class BankApp {
         Account loveAccount = new Account(3333, 1000L, 3);
 
         // 3. 고객에게 정보를 받기 (sender, receiver, amount)
-        long amount = 0L; // 이체할 돈
+        long amount = 100L; // 이체할 돈
 
         // 4. 이체(하승진 -> 홍길동 100원)
-        BankService.이체(ssarAccount, cosAccount, amount);
-        BankService.이체(ssarAccount, loveAccount, amount);
+        BankService.이체(cosAccount, loveAccount, amount);
+
+        System.out.println(cosAccount);
+        System.out.println(loveAccount);
+
+        // 5. 출금
+        BankService.출금(ssarAccount, 100L);
+        System.out.println(ssarAccount);
     }
 }
