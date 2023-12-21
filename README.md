@@ -1,7 +1,7 @@
 # 자바 스터디
 (클래스명에 App이 붙어있는 경우에만 main을 넣었음)
 
-- 변수 (int, double, long, boolean, char)
+- 자료형 (int, double, long, boolean, char)
 - 형변환 (업 캐스팅, 다운 캐스팅)
 - 연산자
 - Scanner
@@ -16,4 +16,4 @@
 - Scope
 - class와 객체
 - 메소드 오버로딩
-- 접근제어자(publc, private)
+- 접근제어자(public, private)
