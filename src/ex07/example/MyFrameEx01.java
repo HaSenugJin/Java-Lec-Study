@@ -10,6 +10,7 @@ public class MyFrameEx01 {
         //jf.setLayout(new FlowLayout());
         jf.setSize(300, 500);
 
+
         JButton btn1 = new JButton("더하기");
         JButton btn2 = new JButton("빼기");
         JLabel la1 = new JLabel(num + "");
@@ -25,7 +26,8 @@ public class MyFrameEx01 {
 
         btn2.addActionListener(e -> {
             num--;
-            if (num < 0) {
+            if(num < 0)
+            {
                 num = 0;
             }
             la1.setText(num + "");
