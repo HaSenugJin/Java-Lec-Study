@@ -7,7 +7,7 @@ public class Customer {
         this.barista = barista;
     }
 
-    public void order(String menuName, Menu menu, Barista barista) {
+    public void order(String menuName, Menu menu) {
         MenuItem menuItem = menu.choose(menuName);
         Coffee coffee = barista.makeCoffee(menuItem);
     }
