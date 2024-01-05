@@ -7,6 +7,6 @@ public class CoffeeApp {
         MenuItem menuItem = new MenuItem("아메리카노");
         Menu menu = new Menu("아메리카노");
 
-        customer.order(menuItem, );
+        //customer.order(menuItem, );
     }
 }
