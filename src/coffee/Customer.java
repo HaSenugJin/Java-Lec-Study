@@ -1,5 +1,7 @@
 package coffee;
 
+import java.util.List;
+
 public class Customer {
     private Barista barista;
 
@@ -7,8 +9,7 @@ public class Customer {
         this.barista = barista;
     }
 
-    public void order(String menuName, Menu menu) {
-        MenuItem menuItem = menu.choose(menuName);
-        Coffee coffee = barista.makeCoffee(menuItem);
+    public void order(List<String> m, Barista barista) {
+        barista.choose(m.get(0));
     }
 }

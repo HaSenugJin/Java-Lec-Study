@@ -4,7 +4,7 @@ public class Coffee {
     private String name;
     private int price;
 
-    public Coffee(MenuItem menuItem) {
-        this.name = menuItem.getName();
+    public Coffee(String menuItem) {
+        this.name = menuItem;
     }
 }

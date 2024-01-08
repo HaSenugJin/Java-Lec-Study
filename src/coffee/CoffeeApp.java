@@ -5,15 +5,16 @@ import java.util.List;
 
 public class CoffeeApp {
     public static void main(String[] args) {
-        String a = "아메리카노";
-        Barista barista = new Barista();
-        Customer customer = new Customer(barista);
-        List<MenuItem> l = new ArrayList<>();
-        Menu m = new Menu(l);
-        MenuItem menuItem = new MenuItem("아메리카노");
-        String me = menuItem.getName();
+        List<String> l = new ArrayList<>();
+        l.add("아메리카노");
+        l.add("카푸치노");
+        l.add("카라멜마끼아또");
+        l.add("에스프레소");
 
-        System.out.println(me);
-        customer.order(a, m);
+        Barista barista = new Barista(l);
+        Customer customer = new Customer(barista);
+        customer.order(l, barista);
+        String a = barista.makeCoffee(l.get(0));
+        System.out.println(a);
     }
 }
