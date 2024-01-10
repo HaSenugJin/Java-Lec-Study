@@ -21,8 +21,21 @@ public class Client {
                 }
             }).start();
 
-            // 3. 메시지 읽기 스레드
+            BufferedReader br = new BufferedReader(
+                    new InputStreamReader(socket.getInputStream(), "UTF-8")
+            );
 
+            // 3. 메시지 읽기 스레드
+            new Thread(() -> {
+                while (true) {
+                    try {
+                        String requestMsg = br.readLine();
+                        System.out.println("클라이언트로부터 받은 메시지 : " + requestMsg);
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+                }
+            }).start();
 
         } catch (IOException e) {
             throw new RuntimeException(e);

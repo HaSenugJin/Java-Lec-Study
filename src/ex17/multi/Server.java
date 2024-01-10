@@ -6,20 +6,21 @@ import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.net.ServerSocket;
 import java.net.Socket;
+import java.util.Scanner;
 
 public class Server {
     public static void main(String[] args) {
         try {
             ServerSocket serverSocket = new ServerSocket(20000);
             Socket socket = serverSocket.accept();
-            // 소켓 연결 완료됨
+            // 1. 소켓 연결 완료됨
 
             // 버퍼 생성
             BufferedReader br = new BufferedReader(
                     new InputStreamReader(socket.getInputStream(), "UTF-8")
             );
 
-            // 메시지 받기 스레드
+            // 2. 메시지 받기 스레드
             new Thread(() -> {
                 while (true) {
                     try {
@@ -31,7 +32,16 @@ public class Server {
                 }
             }).start();
 
+            Scanner sc = new Scanner(System.in);
+            PrintWriter pw = new PrintWriter(socket.getOutputStream(), true);
 
+            // 3. 메시지 전송 스레드
+            new Thread(() -> {
+                while (true) {
+                    String keyboardMsg = sc.nextLine();
+                    pw.println(keyboardMsg);
+                }
+            }).start();
 
         } catch (IOException e) {
             throw new RuntimeException(e);
