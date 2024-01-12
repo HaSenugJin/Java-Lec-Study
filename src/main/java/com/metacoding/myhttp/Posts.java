@@ -9,7 +9,4 @@ public class Posts {
     private int id;
     private String title;
     private String body;
-
-
-
 }
