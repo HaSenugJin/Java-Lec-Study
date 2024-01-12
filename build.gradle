@@ -17,6 +17,8 @@ dependencies {
     implementation group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.16.1'
 
     implementation group: 'org.springframework', name: 'spring-webflux', version: '5.0.2.RELEASE'
+    // https://mvnrepository.com/artifact/org.projectlombok/lombok
+    compileOnly group: 'org.projectlombok', name: 'lombok', version: '1.18.30'
 }
 
 test {
